@@ -85,12 +85,9 @@ int	ft_printunsigned(unsigned int nbr)
 	int	print_len;
 
 	print_len = 0;
-	if (nbr >= 0)
-	{
-		if (nbr > 9)
-			print_len += ft_printunsigned(nbr / 10);
-		ft_putchar_fd((nbr % 10) + '0', 1);
-		print_len++;
-	}
+	if (nbr > 9)
+		print_len += ft_printunsigned(nbr / 10);
+	ft_putchar_fd((nbr % 10) + '0', 1);
+	print_len++;
 	return (print_len);
 }

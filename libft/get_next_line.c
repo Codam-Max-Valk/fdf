@@ -107,10 +107,10 @@ static char	*ft_trim_str(char	*str, int saved)
 
 char	*get_next_line(int fd)
 {
-	static char	*saved_str[OPEN_MAX];
+	static char	*saved_str[FOPEN_MAX];
 	char		*line;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || fd > OPEN_MAX)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd > FOPEN_MAX)
 		return (NULL);
 	saved_str[fd] = ft_read_line(fd, saved_str[fd]);
 	if (!saved_str[fd])

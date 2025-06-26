@@ -12,11 +12,12 @@
 
 NAME = fdf
 CC = gcc -g
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -O3
 MLX42 = MLX42
 MLX_INC = $(MLX42)/include/MLX42
 MLX_LIB = $(MLX42)/build/libmlx42.a
-MLX_FLAGS = -framework Cocoa -framework OpenGL -framework IOKit $(MLX_LIB) -lglfw3
+# MLX_FLAGS = -framework Cocoa -framework OpenGL -framework IOKit $(MLX_LIB) -lglfw
+MLX_FLAGS = -lglfw -L$(shell brew --prefix glfw)/lib $(MLX_LIB) -framework OpenGL -framework Cocoa -framework IOKit
 HEADERFILES = fdf.h
 OBJ_DIR = obj
 SRCFILES = 	main.c \

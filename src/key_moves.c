@@ -76,9 +76,9 @@ void	key_zoom(t_fdf *s_fdf, char dir, double incr)
 
 void	ft_rotate_hook(t_fdf *s_fdf)
 {
-	if (mlx_is_key_down(s_fdf->mlx, MLX_KEY_KP_9))
+	if (mlx_is_key_down(s_fdf->mlx, MLX_KEY_E))
 		gen_f(s_fdf, rotate, 'z', 2);
-	if (mlx_is_key_down(s_fdf->mlx, MLX_KEY_KP_7))
+	if (mlx_is_key_down(s_fdf->mlx, MLX_KEY_Q))
 		gen_f(s_fdf, rotate, 'z', -2);
 	if (mlx_is_key_down(s_fdf->mlx, MLX_KEY_KP_8))
 		gen_f(s_fdf, rotate, 'x', 2);
@@ -90,9 +90,9 @@ void	ft_rotate_hook(t_fdf *s_fdf)
 		gen_f(s_fdf, rotate, 'y', 2);
 	if (mlx_is_key_down(s_fdf->mlx, MLX_KEY_R))
 		gen_f(s_fdf, rotate, 'R', 0);
-	if (mlx_is_key_down(s_fdf->mlx, MLX_KEY_KP_ADD))
+	if (mlx_is_key_down(s_fdf->mlx, MLX_KEY_EQUAL))
 		gen_f(s_fdf, key_zoom, '+', 0.01);
-	if (mlx_is_key_down(s_fdf->mlx, MLX_KEY_KP_SUBTRACT))
+	if (mlx_is_key_down(s_fdf->mlx, MLX_KEY_MINUS))
 		gen_f(s_fdf, key_zoom, '-', -0.01);
 }
 
